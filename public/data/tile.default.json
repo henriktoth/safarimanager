@@ -1,0 +1,7 @@
+{
+  "buyPrice": 100,
+  "isObstacle": false,
+  "isWater": false,
+  "isAlwaysVisible": false,
+  "fallbackTile": "safari:sand"
+}

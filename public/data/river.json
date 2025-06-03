@@ -1,0 +1,6 @@
+{
+  "default": "tile",
+  "isObstacle": true,
+  "isWater": true,
+  "isAlwaysVisible": true
+}

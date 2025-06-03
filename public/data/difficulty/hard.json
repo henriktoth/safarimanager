@@ -1,0 +1,7 @@
+{
+  "balance": 10000,
+  "herbivores": 100,
+  "carnivores": 50,
+  "visitors": 250,
+  "forDays": 15
+}

@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/resources/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/resources/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/resources/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Ubuntu', sans-serif;
+  user-select: none;
+}
+
+dialog {
+  min-width: 20em;
+  max-width: 50%;
+  padding: 0;
+  background: none;
+  user-select: none;
+  align-content: center;
+  border: none;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 0.6em;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvasContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #adadad;
+}
+
+.mainMenuDialog,
+.winDialog,
+.loseDialog,
+.howToPlayDialog {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border: 0.0625em solid #ccc;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: 0 0.25em 0.375em #1a1a1a1a;
+}
+
+.howToPlayDialog {
+  gap: 1em;
+}
+
+.paragraphContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.paragraphContainer p {
+  margin: 0;
+}
+
+.selectDialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border: 0.0625em solid #ccc;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: 0 0.25em 0.375em #1a1a1a1a;
+}
+
+.entryFeeDialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border: 0.0625em solid #ccc;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: 0 0.25em 0.375em #1a1a1a1a;
+}
+
+.entryFeeDialog input {
+  width: 12em;
+  height: 1.5em;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  border: none;
+  background-color: #fafafa;
+  box-shadow: inset 0 0.1em 0.2em #aaa;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.selectDialog .buttonContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.selectDialog .safariButton {
+  padding: 0;
+  width: 3.6em;
+  height: 3.6em;
+}
+
+.selectDialog .safariButton img {
+  max-height: none;
+  width: 100%;
+  height: 100%;
+}
+
+.speedDialog .safariButton {
+  width: 7em;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 20em;
+  margin: 1em;
+}
+
+.menuBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fafafa;
+  box-shadow: 0 0 1em #aaa;
+  z-index: 1;
+}
+
+.menuBar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0.6em;
+}
+
+.labels .container {
+  justify-content: center;
+  gap: 2em;
+}
+
+.container .group {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  gap: 2em;
+}
+
+.group .group {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  gap: 0.4em;
+}
+
+.selectedSpriteLabelImage {
+  width: 2em;
+  height: 2em;
+  background-color: white;
+  outline: 0.1em solid black;
+}
+
+.safariButton {
+  display: flex;
+  gap: 0.4em;
+  padding: 0.5em 1em;
+  align-items: center;
+  background-color: var(--safari-btn-color);
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  height: 2.5em;
+  overflow: hidden;
+  transition:
+    background-color 0.1s ease-in-out,
+    filter 0.2s ease-in-out;
+}
+
+.safariButton:hover {
+  filter: brightness(85%);
+}
+
+.safariButton img {
+  max-height: 1.7em;
+  object-fit: contain;
+}
+
+.safariButton[data-selected='true'] {
+  outline: 0.2em solid tomato;
+}
